@@ -1,0 +1,128 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+
+	var profileImageOne = Model?.Value<IPublishedContent>("aboutUsContentImage")?.Url() ?? "";
+	var trustedImage = Model?.Value<IPublishedContent>("aboutUsTrustedImage")?.Url() ?? "";
+	
+	var teamImageOne = Model?.Value<IPublishedContent>("aboutUsTeamImageOne")?.Url() ?? "";
+	var teamImageTwo = Model?.Value<IPublishedContent>("aboutUsTeamImageTwo")?.Url() ?? "";
+	var teamImageThree = Model?.Value<IPublishedContent>("aboutUsTeamImageThree")?.Url() ?? "";
+	var teamImageFour = Model?.Value<IPublishedContent>("aboutUsTeamImageFour")?.Url() ?? "";
+	var teamImageFive = Model?.Value<IPublishedContent>("aboutUsTeamImageFive")?.Url() ?? "";
+	var teamImageSix = Model?.Value<IPublishedContent>("aboutUsTeamImageSix")?.Url() ?? "";
+	var teamImageSeven = Model?.Value<IPublishedContent>("aboutUsTeamImageSeven")?.Url() ?? "";
+
+	var nextProjectImageOne = Model?.Value<IPublishedContent>("aboutUsNextProjectImageOne")?.Url() ?? "";
+	var nextProjectImageTwo = Model?.Value<IPublishedContent>("aboutUsNextProjectImageTwo")?.Url() ?? "";
+	var nextProjectImageThree = Model?.Value<IPublishedContent>("aboutUsNextProjectImageThree")?.Url() ?? "";
+	var iconOne = Model?.Value<string>("NextProjectFontAwesomeIconClass1") ?? "";
+    var iconTwo = Model?.Value<string>("NextProjectFontAwesomeIconClass2") ?? "";
+    var iconThree = Model?.Value<string>("NextProjectFontAwesomeIconClass3") ?? "";
+		
+}
+
+
+<section id="aboutUsContent" class="aboutUsContent">
+	<div class="container">
+		<div class="content">
+			<div class="image-content">
+				<img src="@profileImageOne" alt="@Model?.Value("aboutUsContentImage")">
+				<p>@Model?.Value("aboutUsImageInfo")</p>
+			</div>
+			<div class="text-content">
+				<blockquote class="quote">@Model?.Value("aboutUsContentQuote")</blockquote>
+				<p class="content-textOne">@Model?.Value("aboutUsContentTextOne")</p>
+				<p class="content-textTwo">@Model?.Value("aboutUsContentTextTwo")</p>
+				<p class="content-textThree">@Model?.Value("aboutUsContentTextThree")</p>
+				<p class="content-textFour">@Model?.Value("aboutUsContentTextFour")</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="aboutUsTrusted" class="aboutUsTrusted">
+	<img src="@trustedImage" alt="@Model?.Value("aboutUsTrustedImage")">
+	<div class="container">
+		<div class="content">
+			<h3>@Model?.Value("aboutUsTrustedTitle")</h3>
+			<div class="headline-box">
+				<h2>@Model?.Value("aboutUsTrustedHeadline")</h2>
+			</div>
+			<div class="text-box">
+				<p class="content-text">@Model?.Value("aboutUsTrustedText")</p>
+			</div>
+			<p class="author">@Model?.Value("aboutUsTrustedAuthorText")</p>
+			<p class="company-text">@Model?.Value("aboutUsTrustedCompanyText")</p>
+		</div>
+	</div>
+</section>
+
+<section id="aboutUsTeam" class="aboutUsTeam">
+	<div class="container">
+		<div class="content">
+			<h5>@Model?.Value("aboutUsTeamTitle")</h5>
+            <h2>@Model?.Value("aboutUsTeamHeadline")</h2>
+		</div>
+		<div class="team-content">
+			<div class="team-box">
+            	<img class="teamImageOne" src="@teamImageOne" alt="@Model?.Value("aboutUsTeamImageOne")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberOne")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleOne")</p>
+				</div>
+        	</div>
+			<div class="team-box">
+            	<img class="teamImageTwo" src="@teamImageTwo" alt="@Model?.Value("aboutUsTeamImageTwo")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberTwo")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleTwo")</p>
+				</div>
+        	</div>
+			<div class="team-box">
+            	<img class="teamImageThree" src="@teamImageThree" alt="@Model?.Value("aboutUsTeamImageThree")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberThree")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleThree")</p>
+				</div>
+        	</div>
+		</div>
+		<div class="team-content-second">
+			<div class="team-box">
+            	<img class="teamImageFour" src="@teamImageFour" alt="@Model?.Value("aboutUsTeamImageFour")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberFour")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleFour")</p>
+				</div>
+        	</div>
+			<div class="team-box">
+            	<img class="teamImageFive" src="@teamImageFive" alt="@Model?.Value("aboutUsTeamImageFive")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberFive")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleFive")</p>
+				</div>
+        	</div>
+			<div class="team-box">
+            	<img class="teamImageSix" src="@teamImageSix" alt="@Model?.Value("aboutUsTeamImageSix")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberSix")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleSix")</p>
+				</div>
+        	</div>
+			<div class="team-box">
+            	<img class="teamImageSeven" src="@teamImageSeven" alt="@Model?.Value("aboutUsTeamImageSeven")">
+				<div class="text-box">
+					<p class="member-name">@Model?.Value("aboutUsTeamMemberSeven")</p>
+					<p class="member-title">@Model?.Value("aboutUsTeamMemberTitleSeven")</p>
+				</div>
+        	</div>
+		</div>
+	</div>
+</section>
+
+
+@await Html.PartialAsync("partials/static/NextProject.cshtml")

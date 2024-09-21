@@ -1,0 +1,97 @@
+.aboutUsNextProject {
+    padding-top: 80px;
+    position: relative;
+    background-color: #F7F7F7;
+
+    &.special-background {
+        background-color: white; // Vit bakgrund på contact sidan
+    }
+
+
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .image-wrapper {
+            position: relative;
+            flex: 1;
+            max-width: 50%;
+
+            // Man som ler
+            .nextProjectImageOne {
+                position: relative;
+                z-index: 2;
+                max-width: 100%;
+                height: auto;
+            }
+
+            // geometry
+            .nextProjectImageTwo {
+                position: absolute;
+                z-index: 1;
+                left: 0px;
+                bottom: 0px;
+                max-width: 100%;
+                height: auto;
+            }
+
+            // dot
+            .nextProjectImageThree {
+                position: absolute;
+                z-index: 0;
+                right: 100px;
+                top: 40px;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .content {
+            flex: 1;
+            max-width: 45%; 
+            margin-left: auto;
+
+            h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: $primary-color;
+                margin-bottom: 20px;
+            }
+
+            .info-box {
+                margin-bottom: 20px;
+
+                p {
+                    color: $bodytext-color;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 5px 0;
+                    
+                }
+
+                .info-text {
+                    margin-left: 25px;
+
+                }
+
+                .location, .phone, .mail {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        margin-right: 10px;
+                        color: #D9C3A9;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

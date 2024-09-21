@@ -1,0 +1,67 @@
+.services-section {
+
+    padding-bottom: 100px;
+
+    .container {
+        margin-top: 50px;
+
+        .headline {
+            text-align: center;
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                color: $primary-color;
+                max-width: 575px;
+                margin: 0 auto;
+            }
+        }
+       
+        .services {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 20px;
+
+
+            a {
+
+                text-decoration: none;
+                .item {
+                    border: 1px solid #EAEAEA;
+                    overflow: hidden;
+    
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: $primary-color;
+                        margin-top: 25px;
+                        margin-left: 25px;
+                        margin-bottom: 25px;
+                    }
+    
+                    img {
+                        width: 100%;
+                        transition: 0.3s ease-in-out;
+                        cursor: pointer;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+    
+                    p {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $bodytext-color;
+                        margin: 25px;
+    
+    
+                    }
+                }
+            }
+        }
+    }
+}

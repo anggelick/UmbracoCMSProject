@@ -1,0 +1,62 @@
+.page-title {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #F7F7F7;
+    text-align: center;
+    position: relative;
+
+    .globe-one {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .globe-two {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: $primary-color;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            color: #666;
+
+            li {
+                display: inline;
+
+                a{
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+            }
+
+            li + li:before {
+                content: ">";
+                padding: 0 8px;
+                color: #666;
+            }
+
+            .active {
+                color: $third-color;
+            }
+        }
+    }
+}

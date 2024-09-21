@@ -1,0 +1,47 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+}
+
+
+<section class="project-details">
+    <div class="container">
+        <main class="main-content">
+            <div class="date">
+                <p><i class="fa-solid fa-calendar-days"></i>@Model?.Value("date")</p>
+            </div>
+            <p class="headline">@Model?.Value("headlineText")</p>
+            <div class="content">
+                @Model?.Value("pageContent")
+            </div>
+        </main>
+
+        <aside class="sidebar">
+			<div class="tags">
+				<h4>Tags</h4>
+				<ul>
+					<li><a href="#">Report</a></li>
+					<li><a href="#">Business plans</a></li>
+					<li><a href="#">Insights</a></li>
+					<li><a href="#">Business</a></li>
+					<li><a href="#">App</a></li>
+					<li><a href="#">Project</a></li>
+					<li><a href="#">Finance</a></li>
+					<li><a href="#">Pricing</a></li>
+				</ul>
+			</div>
+            <div class="help-box">
+				<h2>How can we help you?</h2>
+				<p>online support 24/7, we are here to help you</p>
+				<form action="#" method="post">
+					<input type="email" placeholder="E-mail address">
+				</form>
+			</div>
+        </aside>
+    </div>
+</section>
+
+@await Html.PartialAsync("partials/static/NextProject.cshtml")

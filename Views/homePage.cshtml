@@ -1,0 +1,170 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+    var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+    var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+
+    var serviceImageOne = Model?.Value<IPublishedContent>("ourServiceBoxImageOne")?.Url() ?? "";
+    var serviceImageTwo = Model?.Value<IPublishedContent>("ourServiceBoxImageTwo")?.Url() ?? "";
+    var serviceImageThree = Model?.Value<IPublishedContent>("ourServiceBoxImageThree")?.Url() ?? "";
+    var serviceImageFour = Model?.Value<IPublishedContent>("ourServiceBoxImageFour")?.Url() ?? "";
+    var serviceImageFive = Model?.Value<IPublishedContent>("ourServiceBoxImageFive")?.Url() ?? "";
+    var serviceImageSix = Model?.Value<IPublishedContent>("ourServiceBoxImageSix")?.Url() ?? "";
+
+    var successImageOne = Model?.Value<IPublishedContent>("successStoryBackgroundImage")?.Url() ?? "";
+    var successImageTwo = Model?.Value<IPublishedContent>("successStoryFrontImage")?.Url() ?? "";
+
+    var trustedImageOne = Model?.Value<IPublishedContent>("trustedBackgroundImage")?.Url() ?? "";
+    var trustedImageTwo = Model?.Value<IPublishedContent>("trustedFrontImage")?.Url() ?? "";
+
+    var projectImageOne = Model?.Value<IPublishedContent>("recentProjectsImageOne")?.Url() ?? "";
+    var projectImageTwo = Model?.Value<IPublishedContent>("recentProjectsImageTwo")?.Url() ?? "";
+    var projectImageThree = Model?.Value<IPublishedContent>("recentProjectsImageThree")?.Url() ?? "";
+    var projectImageFour = Model?.Value<IPublishedContent>("recentProjectsImageFour")?.Url() ?? "";
+    
+    var companyImageOne = Model?.Value<IPublishedContent>("companyImageOne")?.Url() ?? "";
+    var companyImageTwo = Model?.Value<IPublishedContent>("companyImageTwo")?.Url() ?? "";
+    var companyImageThree = Model?.Value<IPublishedContent>("companyImageThree")?.Url() ?? "";
+    var companyImageFour = Model?.Value<IPublishedContent>("companyImageFour")?.Url() ?? "";
+    var companyImageFive = Model?.Value<IPublishedContent>("companyImageFive")?.Url() ?? "";
+    var companyImageSix = Model?.Value<IPublishedContent>("companyImageSix")?.Url() ?? "";
+
+
+    
+    
+}
+
+<section id="hero-slider" class="hero">
+    <div class="background" style="background-image:url(@backgroundImage);">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="headline">@Model?.Value("heroHeadline")</h1>
+                <p class="ingress">@Model?.Value("heroText")</p>
+                <div class="btn-box">
+                    <a href="@Model?.Value("heroButtonUrl")" class="btn-primary">@Model?.Value("heroButtonText")</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-us" class="about-us">
+    <div class="container">
+        <div class="content">
+            <div class="headline">
+                <h5>@Model?.Value("aboutSectionTitle")</h5>
+                <h2>@Model?.Value("aboutHeadline")</h2>
+            </div>
+            <blockquote class="quote">@Model?.Value("aboutQuote")</blockquote>
+            <p class="about-text">@Model?.Value("aboutText")</p>
+            <div class="signature-container">
+                <div class="signature">
+                    <img class="signature-image" src="@signatureImage" alt="@Model?.Value("aboutSignature")">
+                    <div class="clarification">
+                        <p class="name">@Model?.Value("aboutSignature")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <!-- Form content goes here -->
+        </div>
+    </div>
+</section>
+
+<section id="our-services" class="our-services">
+    <div class="container">
+        <div class="content">
+            <h5>@Model?.Value("ourServiceSectionTitle")</h5>
+            <h2>@Model?.Value("ourServiceHeadline")</h2>
+        </div>
+        @await Html.PartialAsync("partials/serviceList.cshtml")
+    </div>
+</section>
+
+<section id="trusted-section" class="trusted-section">
+    <div class="container">
+        <img class="trustedImageOne" src="@trustedImageOne" alt="@Model?.Value("trustedBackgroundImage")">
+        <div class="content">
+            <h2 class="headline">@Model?.Value("trustedHeadline")</h5>
+            <h2 class="second-headline">@Model?.Value("trustedNumberBox")</h2>
+        </div>
+        <div class="trusted-content">
+            <p class="trusted-text">@Model?.Value("trustedTextBox")</p>
+            <div class="button-box">
+                <a href="@Model?.Value("trustedButtonUrl")" class="btn-primary">@Model?.Value("trustedButtonText")</a>
+            </div>
+        </div>
+        <img class="trustedImageTwo" src="@trustedImageTwo" alt="@Model?.Value("trustedFrontImage")">
+    </div>
+</section>
+
+<section id="success-story" class="success-story">
+    <div class="container">
+        <img class="successImageOne" src="@successImageOne" alt="@Model?.Value("successStoryBackgroundImage")">
+        <div class="content">
+            <h5>@Model?.Value("successStorySectionTitle")</h5>
+            <h2>@Model?.Value("successStoryHeadline")</h2>
+        </div>
+        <div class="success-content">
+            <div class="content-box">
+                <h2>@Model?.Value("successStoryNumberBoxOne")</h2>
+                <p>@Model?.Value("successStoryTextBoxOne")</p>
+            </div>
+            <div class="content-box">
+                <h2>@Model?.Value("successStoryNumberBoxTwo")</h2>
+                <p>@Model?.Value("successStoryTextBoxTwo")</p>
+            </div>
+            <div class="content-box">
+                <h2>@Model?.Value("successStoryNumberBoxThree")</h2>
+                <p>@Model?.Value("successStoryTextBoxThree")</p>
+            </div>
+        </div>
+        <img class="successImageTwo" src="@successImageTwo" alt="@Model?.Value("successStoryFrontImage")">
+    </div>
+    <div class="white-bar" style="height: 150px; background-color: white;"></div>
+</section>
+
+<section id="recent-projects" class="recent-projects">
+    <div class="container">
+        <div class="content">
+            <h5>@Model?.Value("recentProjectsSectionTitle")</h5>
+            <h2>@Model?.Value("recentProjectsHeadline")</h2>
+        </div>
+    </div>
+    <div class="projects-content">
+        <div class="project-box">
+            <img class="projectImageOne" src="@projectImageOne" alt="@Model?.Value("recentProjectsImageOne")">
+            <div class="text-box">
+                <p class="project-title">@Model?.Value("recentProjectsProjectTitleOne")</p>
+                <p class="service-title">@Model?.Value("recentProjectsServiceTitleOne")</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <img class="projectImageTwo" src="@projectImageTwo" alt="@Model?.Value("recentProjectsImageTwo")">
+            <div class="text-box">
+                <p class="project-title">@Model?.Value("recentProjectsProjectTitleTwo")</p>
+                <p class="service-title">@Model?.Value("recentProjectsServiceTitleTwo")</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <img class="projectImageThree" src="@projectImageThree" alt="@Model?.Value("recentProjectsImageThree")">
+            <div class="text-box">
+                <p class="project-title">@Model?.Value("recentProjectsProjectTitleThree")</p>
+                <p class="service-title">@Model?.Value("recentProjectsServiceTitleThree")</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <img class="projectImageFour" src="@projectImageFour" alt="@Model?.Value("recentProjectsImageFour")">
+            <div class="text-box">
+                <p class="project-title">@Model?.Value("recentProjectsProjectTitleFour")</p>
+                <p class="service-title">@Model?.Value("recentProjectsServiceTitleFour")</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@await Html.PartialAsync("partials/static/companySection.cshtml")

@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'theme/color.scss';
+@import 'components/buttons/buttons.scss';
+@import 'components/breadcrumb/breadcrumb.scss';
+
+
+@import 'sections/TopBarSection/TopBarSection.scss';
+@import 'sections/HeaderSection/HeaderSection.scss';
+@import 'sections/FooterSection/FooterSection.scss';
+@import 'sections/HeroSection/HeroSection.scss';
+@import 'sections/AboutUsSection/AboutUsSection.scss';
+@import 'sections/TrustedSection/TrustedSection.scss';
+@import 'sections/OurServiceSection/OurServiceSection.scss';
+@import 'sections/ProjectSection/ProjectSection.scss';
+@import 'sections/SuccessSection/SuccessSection.scss';
+@import 'sections/ProjectSection/ProjectSection.scss';
+@import 'sections/CompanySection/CompanySection.scss';
+@import 'sections/AboutPage/AboutContentSecton/AboutContentSection.scss';
+@import 'sections/AboutPage/AboutTrustedSection/AboutTrustedSection.scss';
+@import 'sections/AboutPage/AboutTeamSection/AboutTeamSection.scss';
+@import 'sections/AboutPage/AboutNextProjectSection/AboutNextProjectSection.scss';
+@import 'sections/ServicesPage/ServicesSection/ServicesSection.scss';
+@import 'sections/ServicesPage/ServiceDetailPage/ServiceDetailPage.scss';
+@import 'sections/ProjectPage/ProjectSection/projectSection.scss';
+@import 'sections/ProjectPage/ProjectDetailPage/ProjectDetailPage.scss';
+@import 'sections/ContactPage/MapSection/MapSection.scss';
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}

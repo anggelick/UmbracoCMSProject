@@ -1,0 +1,97 @@
+.recent-projects {
+    padding-top: 70px;
+
+
+    .container {
+
+
+
+        .content {
+
+            h5 {
+                font-size: 14px;
+                font-weight: 700;
+                color: $third-color;
+
+            }
+
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                color: $primary-color;
+
+            }
+        }
+    }
+
+
+    .projects-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        gap: 0;
+        margin-top: 30px;
+
+        .project-box {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+
+            .text-box {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+                text-align: left;
+                background-color: #4f5955a9;
+                transition: height 0.3s ease-in-out;
+                height: 80px;
+                overflow: hidden;
+
+                &:hover {
+                    height: 120px;
+                }
+
+
+                .project-title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: white;
+                    margin: 0;
+
+                }
+
+                .service-title {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: white;
+                    margin: 0;
+
+
+                }
+            }
+
+            &:hover .text-box {
+                height: 120px;
+            }
+        }
+    }
+}

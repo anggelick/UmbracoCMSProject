@@ -1,0 +1,59 @@
+#about-us {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .container {
+
+
+        .content {
+            width: 650px;
+
+            .headline {
+
+                h5 {
+                    color: $third-color;
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                h2 {
+                    color: $primary-color;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .quote {
+            font-size: 20px;
+            font-style: italic;
+            color: $bodytext-color;
+            font-weight: 300;
+            margin-top: 30px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            font-weight: 400;
+            color: $bodytext-color;
+        }
+
+        .signature-container {
+
+            .signature {
+
+                .clarification {
+
+
+                    .name {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $bodytext-color;
+                        margin-top: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+}

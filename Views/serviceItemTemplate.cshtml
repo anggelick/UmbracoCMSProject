@@ -1,0 +1,62 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "globalSettings") ?? null;
+    var imageOne = settings?.Value<IPublishedContent>("aboutUsImage")?.Url() ?? "";
+
+	var asideText = settings?.Value<string>("asideText") ?? "";
+	var asideTitle = settings?.Value<string>("asideTitle") ?? "";
+}
+
+<section class="service-details">
+    <div class="container">
+        <div class="content-wrapper">
+            <aside class="left-sidebar">
+                <div class="about-us">
+                    <h2>@asideTitle</h2>
+                    <img src="@imageOne" alt="About us image">
+                    <p>@asideText</p>
+                </div>
+
+                
+                <div class="help-box">
+                    <h2>How can we help you?</h2>
+                    <p>online support 24/7, we are here to help you</p>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="E-mail address">
+                    </form>
+                </div>
+            </aside>
+
+
+            <main class="main-content">
+                @Model?.Value("pageContent")
+            </main>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-form">
+    <div class="container">
+        <h2>Have a question?</h2>
+        <form action="/your-post-endpoint" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+                <textarea name="question" placeholder="Question" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+@await Html.PartialAsync("partials/static/NextProject.cshtml")

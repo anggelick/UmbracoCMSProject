@@ -1,0 +1,69 @@
+.success-story {
+    padding-top: 100px;
+    background-color: $primary-color;
+
+
+    .container {
+        min-height: 800px;
+        position: relative;
+        width: 100%;
+
+
+        .successImageOne {
+            position: absolute;
+            top: 0;
+        }
+
+        .successImageTwo {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .content {
+            text-align: center;
+
+            h5 {
+                font-size: 14px;
+                font-weight: 700;
+                color: $third-color;
+
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                color: white;
+                max-width: 575px;
+                margin: 0 auto;
+
+            }
+        }
+
+        .success-content {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            text-align: center;
+
+            .content-box {
+                max-width: 380px;
+                
+
+                h2 {
+                    font-size: 100px;
+                    font-weight: 600;
+                    color: $third-color;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+        }
+    }
+}

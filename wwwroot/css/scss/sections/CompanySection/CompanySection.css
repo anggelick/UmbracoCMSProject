@@ -1,0 +1,11 @@
+.company {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.company .container {
+  display: flex;
+  justify-content: center;
+}
+.company .container img {
+  margin-right: 80px;
+}/*# sourceMappingURL=CompanySection.css.map */

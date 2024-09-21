@@ -1,0 +1,67 @@
+.aboutUsContent {
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+        .content {
+            display: flex;
+
+
+
+            .image-content {
+
+                img {
+                    height: 570px;
+
+                }
+
+                p {
+                    color: $primary-color;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 400;
+                    margin-top: 15px;
+
+                }
+            }
+
+            .text-content {
+                margin-left: 40px;
+
+                .quote{
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: 300;
+                    color: $bodytext-color;
+
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $bodytext-color;
+                }
+
+                .content-textOne {
+                    margin-top: 30px;
+                }
+
+                .content-textTwo {
+                    margin-top: 30px;
+                }
+
+                .content-textThree {
+                    margin-top: 20px;
+                }
+
+                .content-textFour {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

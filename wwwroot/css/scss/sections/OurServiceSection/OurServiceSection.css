@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.our-services {
+  background-color: #F7F7F7;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.our-services .container .content {
+  text-align: center;
+}
+.our-services .container .service-content {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolumner som tar upp lika mycket utrymme */
+  grid-template-rows: repeat(2, auto); /* Två rader som automatiskt anpassas efter innehållet */
+  gap: 20px; /* Avstånd mellan rutorna, kan justeras efter behov */
+}
+.our-services .container .service-content .service-box {
+  border: 1px solid #EAEAEA;
+}
+.our-services .container .service-content .service-box h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.our-services .container .service-content .service-box p {
+  font-size: 14px;
+  font-weight: 400;
+}/*# sourceMappingURL=OurServiceSection.css.map */

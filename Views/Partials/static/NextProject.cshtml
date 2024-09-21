@@ -1,0 +1,65 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "globalSettings") ?? null;
+
+	var imageOne = settings?.Value<IPublishedContent>("NextProjectImageOne")?.Url() ?? "";
+	var imageTwo = settings?.Value<IPublishedContent>("NextProjectImageTwo")?.Url() ?? "";
+	var imageThree = settings?.Value<IPublishedContent>("NextProjectImageThree")?.Url() ?? "";
+
+	var headline = settings?.Value<string>("NextProjectHeadline") ?? "";
+	var titleOne = settings?.Value<string>("NextProjectInfoTitleOne") ?? "";
+	var titleTwo = settings?.Value<string>("NextProjectInfoTitleTwo") ?? "";
+	var titleThree = settings?.Value<string>("NextProjectInfoTitleThree") ?? "";
+	var textOne = settings?.Value<string>("NextProjectInfoTextOne") ?? "";
+	var textTwo = settings?.Value<string>("NextProjectInfoTextTwo") ?? "";
+	var textThree = settings?.Value<string>("NextProjectInfoTextThree") ?? "";
+
+	var iconOne = settings?.Value<string>("NextProjectFontAwesomeIconClass1") ?? "";
+	var iconTwo = settings?.Value<string>("NextProjectFontAwesomeIconClass2") ?? "";
+	var iconThree = settings?.Value<string>("NextProjectFontAwesomeIconClass3") ?? "";
+
+	// kollar om vi är på contact sidan och sätter en vit bakgrund istället
+	var isContactPage = Context.Request.Path.ToString().ToLower().Contains("/contact"); 
+
+	
+}
+
+
+<section id="aboutUsNextProject" class="aboutUsNextProject @(isContactPage ? "special-background" : "")">
+	<div class="container">
+		<div class="image-wrapper">
+			<img class="nextProjectImageOne" src="@imageOne" alt="@Model?.Value("NextProjectImageOne")">
+			<img class="nextProjectImageTwo" src="@imageTwo" alt="@Model?.Value("NextProjectImageTwo")">
+			<img class="nextProjectImageThree" src="@imageThree" alt="@Model?.Value("NextProjectImageThree")">
+		</div>
+		<div class="content">
+			<h2>@headline</h2>
+			<div class="info-box">
+				<div class="location">
+					<i class="@iconOne"></i>
+					<p>@titleOne</p>
+				</div>
+				<p class="info-text">@textOne</p>
+			</div>
+			<div class="info-box">
+				<div class="phone">
+					<i class="@iconTwo"></i>
+					<p>@titleTwo</p>
+				</div>
+				<p class="info-text">@textTwo</p>
+			</div>
+			<div class="info-box">
+				<div class="mail">
+					<i class="@iconThree"></i>
+					<p>@titleThree</p>
+				</div>
+				<p class="info-text">@textThree</p>
+			</div>
+		</div>
+	</div>
+</section>
+

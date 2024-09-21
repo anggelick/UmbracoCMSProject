@@ -1,0 +1,122 @@
+.aboutUsTeam {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .container {
+        .content {
+            text-align: center;
+
+            h5 {
+                font-size: 14px;
+                font-weight: 700;
+                color: $third-color;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+                color: $primary-color;
+                max-width: 575px;
+                margin: 0 auto;
+            }
+        }
+
+        .team-content {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            
+
+            .team-box {
+                background-color: #fff;
+                border: 1px solid #EAEAEA;
+                text-align: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    transition: 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+
+                .text-box {
+                    padding: 15px 20px 20px 20px;
+                    text-align: left;
+
+                    .member-name {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: $primary-color;
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+    
+                    .member-title {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #9C9EA6;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .team-content-second {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            .team-box {
+                background-color: #fff;
+                border: 1px solid #EAEAEA;
+                text-align: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 700px;
+                    display: block;
+                    transition: 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+
+                .text-box {
+                    padding: 15px 20px 20px 20px;
+                    text-align: left;
+
+                    .member-name {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: $primary-color;
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+    
+                    .member-title {
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #9C9EA6;
+                        margin: 0;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}

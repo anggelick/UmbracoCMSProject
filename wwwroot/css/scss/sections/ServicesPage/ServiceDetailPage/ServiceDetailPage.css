@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.service-details {
+  padding: 50px 0;
+  background-color: white;
+}
+.service-details .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.service-details .content-wrapper {
+  display: flex;
+  gap: 20px; /* Skapar mellanrum mellan kolumnerna */
+}
+.service-details .left-sidebar {
+  flex: 1; /* Lämna 1 del av utrymmet för sidokolumnen */
+  max-width: 300px; /* Gör vänsterkolumnen lite smalare */
+  background-color: #fff;
+  padding: 20px;
+  border-right: 1px solid black;
+}
+.service-details .left-sidebar .about-us {
+  margin-bottom: 20px;
+}
+.service-details .left-sidebar .about-us img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.service-details .left-sidebar .about-us p {
+  font-size: 14px;
+  color: #666;
+}
+.service-details .left-sidebar .help-box {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.service-details .left-sidebar .help-box form {
+  margin-top: 10px;
+}
+.service-details .left-sidebar .help-box form input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.service-details .left-sidebar .help-box form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.service-details .left-sidebar .help-box form button i {
+  margin-left: 5px;
+}
+.service-details .main-content {
+  flex: 3; /* Ge huvudkolumnen mer utrymme */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.service-details .main-content h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.service-details .main-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+.service-details .main-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=ServiceDetailPage.css.map */

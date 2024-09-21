@@ -1,0 +1,48 @@
+header {
+
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+        nav {
+            list-style-type: none;
+            display: inline;
+            margin-right: 50px;
+
+            ul{
+                list-style-type: none;
+                display: inline;
+          
+
+
+                li {
+                    display: inline;
+                    margin-right: 45px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $primary-color;
+
+                    a {
+                        text-decoration: none;
+                        color: $primary-color;
+
+                        &:hover {
+                            color: $third-color;
+                            transition: 0.2s ease-in-out;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        i {
+            color: $primary-color;
+            font-weight: 700;
+        }
+    }
+}

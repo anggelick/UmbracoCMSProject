@@ -1,0 +1,23 @@
+.aboutUsContent {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.aboutUsContent .container {
+  display: flex;
+  justify-content: center;
+}
+.aboutUsContent .container .content {
+  display: flex;
+}
+.aboutUsContent .container .content .text-content {
+  margin-left: 40px;
+}
+.aboutUsContent .container .content .text-content .quote {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+}
+.aboutUsContent .container .content .text-content p {
+  font-size: 14px;
+  font-weight: 400;
+}/*# sourceMappingURL=AboutContentSection.css.map */

@@ -1,0 +1,9 @@
+.aboutUsContent {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #F7F7F7;
+}
+.aboutUsContent .container {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=AboutContentSecton.css.map */

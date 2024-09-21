@@ -1,0 +1,46 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+	var bannerImage = Model?.Value<IPublishedContent>("bannerImage")?.Url() ?? "";
+}
+
+
+
+<sections class="contactNextProject">
+	@await Html.PartialAsync("partials/static/NextProject.cshtml")
+</sections>
+
+<section class="map-section">
+	<div class="map-overlay">
+		<img class="signature-image" src="@bannerImage" alt="@Model?.Value("bannerImage")">
+	</div>
+	<div class="container" id="form-container">
+        <div class="form-content">
+            <h4>REQUEST A CALL BACK</h4>
+			<div class="headline-box">
+				<h2>Let us know about your next project</h2>
+			</div>
+			<div class="text-box">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consectetur, ligula semper sagittis lobortis, eros metus efficitur purus.</p>
+			</div>
+            <form>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="phone" placeholder="Phone">
+                <input type="text" name="email" placeholder="Email address">
+                <select name="service">
+                    <option value="Financial consulting">Financial consulting</option>
+                    <option value="Business consulting">Business consulting</option>
+                    <!-- Add more options here -->
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+</section>
+
+<div style="padding-top: 60px; padding-bottom: 60px; background-color: white;"></div>
+@await Html.PartialAsync("partials/static/companySection.cshtml")
+
+

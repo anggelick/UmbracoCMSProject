@@ -1,0 +1,26 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "globalSettings") ?? null;
+
+    var companyImageOne = settings?.Value<IPublishedContent>("companyImageOne")?.Url() ?? "";
+    var companyImageTwo = settings?.Value<IPublishedContent>("companyImageTwo")?.Url() ?? "";
+    var companyImageThree = settings?.Value<IPublishedContent>("companyImageThree")?.Url() ?? "";
+    var companyImageFour = settings?.Value<IPublishedContent>("companyImageFour")?.Url() ?? "";
+    var companyImageFive = settings?.Value<IPublishedContent>("companyImageFive")?.Url() ?? "";
+    var companyImageSix = settings?.Value<IPublishedContent>("companyImageSix")?.Url() ?? "";
+}
+
+<section id="company" class="company">
+    <div class="container">
+        <img class="companyImageOne" src="@companyImageOne" alt="@Model?.Value("companyImageOne")">
+        <img class="companyImageTwo" src="@companyImageTwo" alt="@Model?.Value("companyImageTwo")">
+        <img class="companyImageThree" src="@companyImageThree" alt="@Model?.Value("companyImageThree")">
+        <img class="companyImageFour" src="@companyImageFour" alt="@Model?.Value("companyImageFour")">
+        <img class="companyImageFive" src="@companyImageFive" alt="@Model?.Value("companyImageFive")">
+        <img class="companyImageSix" src="@companyImageSix" alt="@Model?.Value("companyImageSix")">
+    </div>
+</section>

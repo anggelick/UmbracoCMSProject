@@ -1,0 +1,25 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "globalSettings") ?? null;
+    var copyright = settings?.Value<string>("footerCopyright") ?? "";
+    var credits = settings?.Value<string>("footerCredits") ?? "";
+
+   
+}
+
+
+<footer>
+    <div class="container">
+        <p class="copyright-text">@copyright<span class="credit-text"> @credits</span></p>
+    </div>
+
+
+
+
+
+
+
+</footer>

@@ -1,0 +1,37 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "globalSettings") ?? null;
+    var officeLocation = settings?.Value<string>("topBarCompanyAddress") ?? "";
+    var iconOne = settings?.Value<string>("topBarFontAwesomeIconClass1") ?? "";
+    var iconTwo = settings?.Value<string>("topBarFontAwesomeIconClass2") ?? "";
+    var iconThree = settings?.Value<string>("topBarFontAwesomeIconClass3") ?? "";
+
+
+}
+
+<div class="top-bar">
+    <div class="container">
+    <div class="company-address">
+        <p>@officeLocation</p>
+    </div>
+    <div class="socials">
+         @if (!string.IsNullOrEmpty(iconOne))
+        {
+            <a href="@Model?.Value("topBarFontAwesomeIconClass1Url")"><i class="@iconOne"></i></a>
+        }
+        @if (!string.IsNullOrEmpty(iconTwo))
+        {
+            <a href="@Model?.Value("topBarFontAwesomeIconClass2Url")"><i class="@iconTwo"></i></a>
+        }
+        @if (!string.IsNullOrEmpty(iconThree))
+        {
+           <a href="@Model?.Value("topBarFontAwesomeIconClass3Url")"><i class="@iconThree"></i></a>
+        }
+    </div>
+</div>
+</div>

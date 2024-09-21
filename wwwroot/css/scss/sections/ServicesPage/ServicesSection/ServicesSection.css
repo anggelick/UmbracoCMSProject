@@ -1,0 +1,38 @@
+.services-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.services-section .container .services {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+.services-section .container .services .item {
+  border: 2px solid black;
+  overflow: hidden;
+}
+.services-section .container .services .item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: red;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.services-section .container .services .item img {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.services-section .container .services .item img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.services-section .container .services .item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: red;
+  margin: 25px;
+}/*# sourceMappingURL=ServicesSection.css.map */
