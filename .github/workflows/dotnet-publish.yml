@@ -50,5 +50,5 @@ jobs:
         with:
           app-name: 'umbraco-cms-anggelick'
           slot-name: 'Production'
-          package: ./myapp  # Deploy from the correct artifact location
+          package: .  # Deploy from the correct artifact location
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_274174FF30504E56935274E3A0E80F0A }}
