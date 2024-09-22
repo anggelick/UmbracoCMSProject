@@ -19,16 +19,17 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build ./UmbracoCMSProject2/ --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish ./UmbracoCMSProject2/ -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        # Publish to the working directory instead of Program Files
+        run: dotnet publish -c Release -o ./myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./myapp  # Adjust path to match the new publish directory
 
   deploy:
     runs-on: windows-latest
@@ -49,5 +50,5 @@ jobs:
         with:
           app-name: 'umbraco-cms-anggelick'
           slot-name: 'Production'
-          package: .
+          package: ./myapp  # Deploy from the correct artifact location
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_274174FF30504E56935274E3A0E80F0A }}
